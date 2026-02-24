@@ -1,0 +1,114 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  passwordHash  String
+  firstName     String
+  lastName      String
+  role          String    @default("BUYER") // BUYER | SELLER | ADMIN
+  avatar        String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  sellerProfile SellerProfile?
+  orders        Order[]
+  reviews       Review[]
+}
+
+model SellerProfile {
+  id             String   @id @default(cuid())
+  userId         String   @unique
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  displayName    String
+  avatar         String   @default("")
+  bio            String   @default("")
+  rating         Float    @default(5.0)
+  reviewCount    Int      @default(0)
+  completionRate Float    @default(100.0)
+  totalOrders    Int      @default(0)
+  responseTime   String   @default("< 15 min")
+  verified       Boolean  @default(false)
+  createdAt      DateTime @default(now())
+
+  listings Listing[]
+}
+
+model Game {
+  id         String   @id @default(cuid())
+  name       String
+  slug       String   @unique
+  image      String
+  categories String   // JSON array stored as string: '["BOOSTING","CURRENCY"]'
+  createdAt  DateTime @default(now())
+
+  listings Listing[]
+}
+
+model Listing {
+  id                String   @id @default(cuid())
+  title             String
+  description       String
+  price             Float
+  gameId            String
+  game              Game     @relation(fields: [gameId], references: [id])
+  categoryType      String   // BOOSTING | CURRENCY | ACCOUNTS | ITEMS | SKINS | TOP_UP | GIFT_CARDS | COACHING
+  sellerId          String
+  seller            SellerProfile @relation(fields: [sellerId], references: [id])
+  status            String   @default("ACTIVE") // ACTIVE | SOLD | INACTIVE | ARCHIVED
+  tags              String   @default("[]") // JSON array
+  deliveryTimeHours Float    @default(1)
+  viewCount         Int      @default(0)
+  ordersCount       Int      @default(0)
+  rating            Float    @default(5.0)
+  reviewCount       Int      @default(0)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  reviews    Review[]
+  orderItems OrderItem[]
+}
+
+model Order {
+  id          String      @id @default(cuid())
+  userId      String
+  user        User        @relation(fields: [userId], references: [id])
+  totalAmount Float
+  status      String      @default("PENDING") // PENDING | IN_PROGRESS | COMPLETED | CANCELLED | DISPUTED
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  items OrderItem[]
+}
+
+model OrderItem {
+  id        String  @id @default(cuid())
+  orderId   String
+  order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  listingId String
+  listing   Listing @relation(fields: [listingId], references: [id])
+  title     String
+  price     Float
+  quantity  Int     @default(1)
+  options   String  @default("{}") // JSON
+}
+
+model Review {
+  id           String   @id @default(cuid())
+  listingId    String
+  listing      Listing  @relation(fields: [listingId], references: [id])
+  userId       String
+  user         User     @relation(fields: [userId], references: [id])
+  reviewerName String
+  rating       Int      // 1-5
+  comment      String
+  helpfulCount Int      @default(0)
+  createdAt    DateTime @default(now())
+}

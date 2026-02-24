@@ -1,0 +1,26 @@
+
+> b4boosting@0.1.0 build
+> next build
+
+ΓÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\HP\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\HP\Downloads\B4Boosting\b4boosting\package-lock.json
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 2.9s
+  Running TypeScript ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/19) ...
+Error occurred prerendering page "/games/old-school-runescape". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: a.tags.slice(...).map is not a function
+    at j (C:\Users\HP\Downloads\B4Boosting\b4boosting\.next\server\chunks\ssr\Downloads_B4Boosting_b4boosting_2b7fdd73._.js:1:4368) {
+  digest: '1274937144'
+}
+Export encountered an error on /games/[slug]/page: /games/old-school-runescape, exiting the build.
+Γ¿» Next.js build worker exited with code: 1 and signal: null

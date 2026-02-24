@@ -1,0 +1,24 @@
+Loaded Prisma config from prisma.config.ts.
+
+Running seed command `npx tsx prisma/seed.ts` ...
+C:\Users\HP\Downloads\B4Boosting\b4boosting\node_modules\@prisma\client\src\runtime\utils\validatePrismaClientOptions.ts:239
+      throw new PrismaClientConstructorValidationError(
+            ^
+
+PrismaClientConstructorValidationError: Unknown property datasourceUrl provided to PrismaClient constructor.
+Read more at https://pris.ly/d/client-constructor
+    at validatePrismaClientOptions (C:\Users\HP\Downloads\B4Boosting\b4boosting\node_modules\@prisma\client\src\runtime\utils\validatePrismaClientOptions.ts:239:13)
+    at new t (C:\Users\HP\Downloads\B4Boosting\b4boosting\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:281:7)
+    at g (C:\Users\HP\Downloads\B4Boosting\b4boosting\prisma\seed.ts:5:16)
+    at Object.<anonymous> (C:\Users\HP\Downloads\B4Boosting\b4boosting\prisma\seed.ts:160:40)
+    at Module._compile (node:internal/modules/cjs/loader:1809:14)
+    at Object.transformer (C:\Users\HP\Downloads\B4Boosting\b4boosting\node_modules\tsx\dist\register-D46fvsV_.cjs:3:1104)
+    at Module.load (node:internal/modules/cjs/loader:1530:32)
+    at Module._load (node:internal/modules/cjs/loader:1332:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at loadCJSModuleWithModuleLoad (node:internal/modules/esm/translators:338:3)
+
+Node.js v25.6.0
+
+An error occurred while running the seed command:
+Error: Command failed with exit code 1: npx tsx prisma/seed.ts

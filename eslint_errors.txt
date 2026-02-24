@@ -1,0 +1,167 @@
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\app\checkout\page.tsx
+  4:10  warning  'CartItem' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\app\dashboard\layout.tsx
+  6:73  warning  'User' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\app\dashboard\page.tsx
+   4:10  warning  'Separator' is defined but never used                            @typescript-eslint/no-unused-vars
+  12:64  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  12:71  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\app\games\[slug]\page.tsx
+   8:10  warning  'SectionHeader' is defined but never used        @typescript-eslint/no-unused-vars
+  10:5   warning  'Breadcrumb' is defined but never used           @typescript-eslint/no-unused-vars
+  11:5   warning  'BreadcrumbItem' is defined but never used       @typescript-eslint/no-unused-vars
+  12:5   warning  'BreadcrumbLink' is defined but never used       @typescript-eslint/no-unused-vars
+  13:5   warning  'BreadcrumbList' is defined but never used       @typescript-eslint/no-unused-vars
+  14:5   warning  'BreadcrumbPage' is defined but never used       @typescript-eslint/no-unused-vars
+  15:5   warning  'BreadcrumbSeparator' is defined but never used  @typescript-eslint/no-unused-vars
+  17:10  warning  'Separator' is defined but never used            @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\app\listings\[id]\page.tsx
+   3:8   warning  'Image' is defined but never used           @typescript-eslint/no-unused-vars
+   4:8   warning  'Link' is defined but never used            @typescript-eslint/no-unused-vars
+   6:10  warning  'SectionHeader' is defined but never used   @typescript-eslint/no-unused-vars
+   7:10  warning  'StarRating' is defined but never used      @typescript-eslint/no-unused-vars
+   8:10  warning  'Avatar' is defined but never used          @typescript-eslint/no-unused-vars
+   8:18  warning  'AvatarFallback' is defined but never used  @typescript-eslint/no-unused-vars
+   8:34  warning  'AvatarImage' is defined but never used     @typescript-eslint/no-unused-vars
+   9:10  warning  'Tabs' is defined but never used            @typescript-eslint/no-unused-vars
+   9:16  warning  'TabsContent' is defined but never used     @typescript-eslint/no-unused-vars
+   9:29  warning  'TabsList' is defined but never used        @typescript-eslint/no-unused-vars
+   9:39  warning  'TabsTrigger' is defined but never used     @typescript-eslint/no-unused-vars
+  10:10  warning  'Separator' is defined but never used       @typescript-eslint/no-unused-vars
+  11:10  warning  'Badge' is defined but never used           @typescript-eslint/no-unused-vars
+  12:10  warning  'CheckCircle2' is defined but never used    @typescript-eslint/no-unused-vars
+  12:24  warning  'ShieldCheck' is defined but never used     @typescript-eslint/no-unused-vars
+  12:37  warning  'Clock' is defined but never used           @typescript-eslint/no-unused-vars
+  12:44  warning  'MessageCircle' is defined but never used   @typescript-eslint/no-unused-vars
+  12:59  warning  'ChevronRight' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\app\login\page.tsx
+   5:10  warning  'Separator' is defined but never used                            @typescript-eslint/no-unused-vars
+  64:24  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\app\page.tsx
+  2:10  warning  'Suspense' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\app\seller\[id]\page.tsx
+  3:8   warning  'Image' is defined but never used      @typescript-eslint/no-unused-vars
+  9:10  warning  'Separator' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\app\seller\page.tsx
+  2:8   warning  'Image' is defined but never used         @typescript-eslint/no-unused-vars
+  5:10  warning  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\cart\CartSheet.tsx
+  6:56  warning  'SheetTrigger' is defined but never used  @typescript-eslint/no-unused-vars
+  8:10  warning  'Separator' is defined but never used     @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\home\HeroBanner.tsx
+  30:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\home\HeroBanner.tsx:30:9
+  28 |
+  29 |     useEffect(() => {
+> 30 |         setParticles([...Array(20)].map((_, i) => ({
+     |         ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  31 |             key: i,
+  32 |             style: {
+  33 |                 left: `${Math.random() * 100}%`,  react-hooks/set-state-in-effect
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\home\HowItWorks.tsx
+   4:10  warning  'cn' is defined but never used     @typescript-eslint/no-unused-vars
+  25:52  warning  'index' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\home\PaymentMethods.tsx
+  4:10  warning  'SectionHeader' is defined but never used  @typescript-eslint/no-unused-vars
+  5:10  warning  'CreditCard' is defined but never used     @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\home\PopularCurrency.tsx
+  16:47  warning  'index' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\home\TrustBadges.tsx
+  4:10  warning  'cn' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\layout\Footer.tsx
+  2:10  warning  'Facebook' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\layout\Header.tsx
+   4:10  warning  'usePathname' is defined but never used  @typescript-eslint/no-unused-vars
+   5:31  warning  'User' is defined but never used         @typescript-eslint/no-unused-vars
+  16:8   warning  'Image' is defined but never used        @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\layout\MobileNav.tsx
+   5:16  warning  'ChevronDown' is defined but never used        @typescript-eslint/no-unused-vars
+   5:29  warning  'Gamepad2' is defined but never used           @typescript-eslint/no-unused-vars
+   5:39  warning  'Coins' is defined but never used              @typescript-eslint/no-unused-vars
+   5:46  warning  'User' is defined but never used               @typescript-eslint/no-unused-vars
+   5:52  warning  'Gift' is defined but never used               @typescript-eslint/no-unused-vars
+  14:11  warning  'pathname' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\listings\FilterSidebar.tsx
+  4:10  warning  'Separator' is defined but never used  @typescript-eslint/no-unused-vars
+  5:10  warning  'Slider' is defined but never used     @typescript-eslint/no-unused-vars
+  6:10  warning  'Checkbox' is defined but never used   @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\listings\PriceConfigurator.tsx
+   4:19  warning  'CategoryType' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   9:10  warning  'formatCurrency' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+  37:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\listings\PriceConfigurator.tsx:37:9
+  35 |         }
+  36 |
+> 37 |         setOptions(initialOptions)
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  38 |         onOptionsChange(initialOptions)
+  39 |     }, [listing.categoryType, listing.gameSlug]) // eslint-disable-line react-hooks/exhaustive-deps
+  40 |  react-hooks/set-state-in-effect
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\ui\GlowButton.tsx
+  10:29  warning  'glowColor' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\ui\SectionHeader.tsx
+  1:10  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\ui\StarRating.tsx
+  1:16  warning  'StarHalf' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\ui\command.tsx
+  26:11  error  An interface declaring no members is equivalent to its supertype  @typescript-eslint/no-empty-object-type
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\ui\input.tsx
+  5:18  error  An interface declaring no members is equivalent to its supertype  @typescript-eslint/no-empty-object-type
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\components\ui\use-toast.ts
+  21:7  warning  'actionTypes' is assigned a value but only used as a type  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\lib\constants.ts
+  2:10  warning  'Sword' is defined but never used      @typescript-eslint/no-unused-vars
+  2:46  warning  'RefreshCw' is defined but never used  @typescript-eslint/no-unused-vars
+  2:57  warning  'Zap' is defined but never used        @typescript-eslint/no-unused-vars
+  2:62  warning  'Trophy' is defined but never used     @typescript-eslint/no-unused-vars
+  2:77  warning  'User' is defined but never used       @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\lib\mockData.ts
+  1:48  warning  'CategoryType' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\Downloads\B4Boosting\b4boosting\tailwind.config.ts
+  119:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+Γ£û 76 problems (8 errors, 68 warnings)
+

@@ -1,0 +1,29 @@
+
+> b4boosting@0.1.0 build
+> next build
+
+ΓÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\HP\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\HP\Downloads\B4Boosting\b4boosting\package-lock.json
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 3.0s
+  Running TypeScript ...
+Failed to compile.
+
+./app/seller/[id]/page.tsx:42:37
+Type error: Property 'verified' does not exist on type 'SellerProfile'.
+
+  40 |                         <h1 className="font-display font-bold text-4xl text-white flex items-center gap-2">
+  41 |                             {seller.name}
+> 42 |                             {seller.verified && (
+     |                                     ^
+  43 |                                 <Badge variant="secondary" className="h-6 px-2 text-xs bg-accent-green/10 text-accent-green border-0 rounded-md">
+  44 |                                     Verified Seller
+  45 |                                 </Badge>
+Next.js build worker exited with code: 1 and signal: null
